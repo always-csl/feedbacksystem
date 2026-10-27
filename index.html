@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feedback System - Login</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header-bar">
+      <div class="logo">Feedback System</div>
+    </header>
+
+    <!-- Login -->
+    <main class="login-container">
+      <!-- Login Image -->
+      <section class="image-section" aria-label="Student working">
+        <img src="DESK_GIRL.png" alt="Student working at a desk" />
+      </section>
+
+      <!-- Login Form -->
+      <section class="login-section">
+        <div class="login-content">
+          <!-- Welcome -->
+          <div class="welcome-header">
+            <h1>Welcome!</h1>
+
+            <p>Enter your credentials to continue.</p>
+          </div>
+
+          <!-- Login Card -->
+          <div class="card login-card">
+            <form action="assignments.html" method="get">
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <!-- Password -->
+              <div class="form-group">
+                <label for="password">Password</label>
+
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+              </div>
+
+              <!-- Login -->
+              <button type="submit" class="btn btn-login">Log In</button>
+
+              <!-- Forgot Password -->
+              <div class="forgot-password">
+                <a href="forgot-password.html">Forgot password?</a>
+              </div>
+
+              <!-- Create Account -->
+              <div class="signup-prompt">
+                <p>New user? Create an account to get started.</p>
+
+                <a href="create-account.html" class="btn btn-create">Create New Account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bar">
+      <p>&copy; 2026 Feedback System &middot; Northcentral Technical College</p>
+    </footer>
+  </body>
+</html>

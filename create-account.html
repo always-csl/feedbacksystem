@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feedback System - Create Account</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header-bar">
+      <div class="logo">Feedback System</div>
+    </header>
+
+    <!-- Create Account -->
+    <main class="login-container">
+      <!-- Image -->
+      <section class="image-section" aria-label="Student working">
+        <img src="DESK_GIRL.png" alt="Student working at a desk" />
+      </section>
+
+      <!-- Form Section -->
+      <section class="login-section">
+        <div class="login-content">
+          <!-- Welcome -->
+          <div class="welcome-header">
+            <h1>Create Your Account</h1>
+            <p>Enter your information to get started.</p>
+          </div>
+
+          <!-- Card -->
+          <div class="card login-card">
+            <form action="index.html" method="get">
+              <!-- First Name -->
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  placeholder="Enter your first name"
+                  autocomplete="given-name"
+                  required
+                />
+              </div>
+
+              <!-- Last Name -->
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  placeholder="Enter your last name"
+                  autocomplete="family-name"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <!-- Student ID -->
+              <div class="form-group">
+                <label for="student-id">Student ID</label>
+
+                <input
+                  type="text"
+                  id="student-id"
+                  name="student-id"
+                  placeholder="Enter your student ID"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+
+              <!-- Password -->
+              <div class="form-group">
+                <label for="password">Password</label>
+
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+
+              <!-- Create Account -->
+              <button type="submit" class="btn btn-login">
+                Create Account
+              </button>
+
+              <!-- Back to Login -->
+              <div class="forgot-password">
+                <a href="index.html">Already have an account? Log in</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bar">
+      <p>&copy; 2026 Feedback System &middot; Northcentral Technical College</p>
+    </footer>
+  </body>
+</html>

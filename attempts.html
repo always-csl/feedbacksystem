@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feedback System - Attempts</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header-bar">
+      <div class="logo">Feedback System</div>
+    </header>
+
+    <!-- Application Layout -->
+    <div class="app-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a
+            href="assignments.html"
+            class="nav-item active"
+            aria-current="page"
+          >
+            <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
+            <span>Assignments</span>
+          </a>
+
+          <a href="profile.html" class="nav-item">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Profile</span>
+          </a>
+
+          <a href="help.html" class="nav-item">
+            <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+            <span>Help</span>
+          </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="sidebar-bottom">
+          <a href="index.html" class="nav-item logout-btn">
+            <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <a href="assignments.html" class="back-link">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          Back to Assignments
+        </a>
+
+        <!-- Page Heading -->
+        <div class="page-heading attempts-heading">
+          <div>
+            <h1 id="assignment-title">Zoo 1A</h1>
+            <p>View your submission attempts and feedback.</p>
+          </div>
+
+          <a id="resubmit-link" href="#" class="btn btn-primary">
+            Resubmit Assignment
+          </a>
+        </div>
+
+        <!-- Attempt Summary -->
+        <section class="card attempt-summary">
+          <div class="summary-item">
+            <span class="summary-label">Total Attempts</span>
+            <strong>2</strong>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-item">
+            <span class="summary-label">Latest Submission</span>
+            <strong>September 14, 2026</strong>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-item">
+            <span class="summary-label">Current Status</span>
+
+            <span class="status-label">
+              <i
+                class="fa-solid fa-circle-exclamation status-icon icon-warning"
+                aria-hidden="true"
+              ></i>
+
+              Needs Attention
+            </span>
+          </div>
+        </section>
+
+        <!-- Attempts Section -->
+        <section class="card attempts-card">
+          <div class="section-header">
+            <div>
+              <h2>Submission Attempts</h2>
+              <p>Review the feedback from each submission.</p>
+            </div>
+          </div>
+
+          <!-- Attempt 2 -->
+          <article class="attempt-item">
+            <div class="attempt-header">
+              <div class="attempt-info">
+                <div class="attempt-title-row">
+                  <h3>Attempt 2</h3>
+
+                  <span class="attempt-status warning">
+                    <i
+                      class="fa-solid fa-circle-exclamation"
+                      aria-hidden="true"
+                    ></i>
+
+                    Needs Attention
+                  </span>
+                </div>
+
+                <p class="submission-date">
+                  Submitted September 14, 2026 at 5:05 PM
+                </p>
+              </div>
+
+              <button type="button" class="btn btn-outline">
+                Copy Results Link
+              </button>
+            </div>
+
+            <!-- Feedback -->
+            <div class="feedback-block">
+              <div class="feedback-heading">
+                <i
+                  class="fa-solid fa-circle-exclamation"
+                  aria-hidden="true"
+                ></i>
+
+                <span>Feedback Results</span>
+              </div>
+
+              <p class="feedback-message">
+                Submitted file must be named
+                <strong>Zoo 4.1B Lee.zip</strong>, but it is named
+                <strong>Zoo 1.1 Lee.zip</strong>. Please correct the filename
+                and resubmit.
+              </p>
+            </div>
+
+            <!-- Attempt Actions -->
+            <div class="attempt-actions">
+              <a href="#" class="download-link">
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+                <span>Download Submission</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Attempt 1 -->
+          <article class="attempt-item">
+            <div class="attempt-header">
+              <div class="attempt-info">
+                <div class="attempt-title-row">
+                  <h3>Attempt 1</h3>
+
+                  <span class="attempt-status warning">
+                    <i
+                      class="fa-solid fa-circle-exclamation"
+                      aria-hidden="true"
+                    ></i>
+
+                    Needs Attention
+                  </span>
+                </div>
+
+                <p class="submission-date">
+                  Submitted September 14, 2026 at 4:42 PM
+                </p>
+              </div>
+
+              <button type="button" class="btn btn-outline">
+                Copy Results Link
+              </button>
+            </div>
+
+            <!-- Feedback -->
+            <div class="feedback-block">
+              <div class="feedback-heading">
+                <i
+                  class="fa-solid fa-circle-exclamation"
+                  aria-hidden="true"
+                ></i>
+
+                <span>Feedback Results</span>
+              </div>
+
+              <p class="feedback-message">
+                Submitted file must be named
+                <strong>Zoo 4.1B Lee.zip</strong>, but it is named
+                <strong>Zoo 1.1 Lee.zip</strong>. Please correct the filename
+                and resubmit.
+              </p>
+            </div>
+
+            <!-- Attempt Actions -->
+            <div class="attempt-actions">
+              <a href="#" class="download-link">
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+                <span>Download Submission</span>
+              </a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-bar">
+      <p>
+        &copy; 2026 Feedback System &middot; Northcentral Technical College
+      </p>
+    </footer>
+
+    <script>
+      /*
+       * Get the assignment from the URL.
+       *
+       * Example:
+       * attempts.html?assignment=zoo1a
+       */
+
+      const params = new URLSearchParams(window.location.search);
+      const assignment = params.get("assignment") || "zoo1a";
+
+      const assignmentNames = {
+        zoo1a: "Zoo 1A",
+        zoo1b: "Zoo 1B",
+        zoo1c: "Zoo 1C",
+        zoo2a: "Zoo 2A"
+      };
+
+      const assignmentName =
+        assignmentNames[assignment] || "Zoo 1A";
+
+      document.getElementById("assignment-title").textContent =
+        assignmentName;
+
+      document.getElementById("resubmit-link").href =
+        "upload.html?assignment=" + assignment;
+
+      document.title =
+        "Feedback System - " + assignmentName + " Attempts";
+    </script>
+  </body>
+</html>

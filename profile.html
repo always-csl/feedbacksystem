@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feedback System - Profile</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header-bar">
+      <div class="logo">Feedback System</div>
+    </header>
+
+    <!-- Application Layout -->
+    <div class="app-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="nav-menu" aria-label="Main navigation">
+          <!-- Assignments -->
+          <a href="assignments.html" class="nav-item">
+            <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
+            <span>Assignments</span>
+          </a>
+
+          <!-- Profile -->
+          <a href="profile.html" class="nav-item active" aria-current="page">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Profile</span>
+          </a>
+
+          <!-- Help -->
+          <a href="help.html" class="nav-item">
+            <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+            <span>Help</span>
+          </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="sidebar-bottom">
+          <a href="index.html" class="nav-item logout-btn">
+            <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="profile-content">
+          <!-- Page Heading -->
+          <div class="page-heading">
+            <div>
+              <h1>Profile</h1>
+              <p>View and manage your student account.</p>
+            </div>
+          </div>
+
+          <!-- Student Profile -->
+          <section class="card profile-header-card">
+            <div class="profile-picture">
+              <img src="profile_img.jpg" alt="Student profile picture" />
+            </div>
+
+            <div class="profile-details">
+              <h2>Chia Lee</h2>
+
+              <p>Student ID: 12345678</p>
+
+              <span class="profile-course">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+
+                Object Oriented Programming
+              </span>
+            </div>
+          </section>
+
+          <!-- Notifications -->
+          <section class="card">
+            <h2>Notifications</h2>
+
+            <div class="notification-list">
+              <!-- Notification 1 -->
+              <div class="notification-item">
+                <div class="notification-icon warning">
+                  <i
+                    class="fa-solid fa-circle-exclamation"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+
+                <div class="notification-info">
+                  <strong>Zoo 1A needs attention</strong>
+
+                  <p>
+                    Your latest submission contains an error. Review your
+                    feedback and resubmit the assignment.
+                  </p>
+
+                  <span class="notification-time"> Today </span>
+                </div>
+              </div>
+
+              <!-- Notification 2 -->
+              <div class="notification-item">
+                <div class="notification-icon">
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                </div>
+
+                <div class="notification-info">
+                  <strong>Zoo 1B was submitted</strong>
+
+                  <p>Your submission was received successfully.</p>
+
+                  <span class="notification-time"> Yesterday </span>
+                </div>
+              </div>
+
+              <!-- Notification 3 -->
+              <div class="notification-item">
+                <div class="notification-icon">
+                  <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                </div>
+
+                <div class="notification-info">
+                  <strong>Course reminder</strong>
+
+                  <p>
+                    Remember to complete your upcoming assignment before the due
+                    date.
+                  </p>
+
+                  <span class="notification-time"> September 28, 2026 </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Course Completion -->
+          <section class="card">
+            <div class="completion-header">
+              <h2>Course Completion</h2>
+
+              <span class="completion-percent">68%</span>
+            </div>
+
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-label="Course completion"
+              aria-valuenow="68"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="progress-fill"></div>
+            </div>
+
+            <p class="completion-text">
+              You have completed 68% of your current course.
+            </p>
+          </section>
+
+          <!-- Course Management -->
+          <section class="card">
+            <h2>Course Management</h2>
+
+            <div class="course-management">
+              <div class="select-wrapper">
+                <label
+                  for="profile-course-select"
+                  class="course-management-label"
+                >
+                  Current Course
+                </label>
+
+                <select id="profile-course-select" class="course-dropdown">
+                  <option value="oop">
+                    Fall 2026 - Object Oriented Programming
+                  </option>
+
+                  <option value="web">Fall 2026 - Web Development</option>
+
+                  <option value="database">
+                    Spring 2027 - Database Systems
+                  </option>
+                </select>
+
+                <i
+                  class="fa-solid fa-chevron-down dropdown-arrow"
+                  aria-hidden="true"
+                ></i>
+              </div>
+
+              <button type="button" class="btn btn-primary">
+                Update Course
+              </button>
+            </div>
+          </section>
+
+          <!-- Account Settings -->
+          <section class="card">
+            <h2>Account Settings</h2>
+
+            <div class="profile-actions">
+              <!-- Update Information -->
+              <a href="#" class="profile-action">
+                <div class="profile-action-icon">
+                  <i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
+                </div>
+
+                <div class="profile-action-info">
+                  <strong>Update Information</strong>
+
+                  <span>
+                    Change your name, email, or student information.
+                  </span>
+                </div>
+
+                <i
+                  class="fa-solid fa-chevron-right profile-action-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
+              <!-- Change Password -->
+              <a href="#" class="profile-action">
+                <div class="profile-action-icon">
+                  <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                </div>
+
+                <div class="profile-action-info">
+                  <strong>Change Password</strong>
+
+                  <span> Update your account password. </span>
+                </div>
+
+                <i
+                  class="fa-solid fa-chevron-right profile-action-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-bar">
+      <p>&copy; 2026 Feedback System &middot; Northcentral Technical College</p>
+    </footer>
+  </body>
+</html>

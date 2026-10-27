@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Feedback System - Upload Assignment</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header-bar">
+      <div class="logo">Feedback System</div>
+    </header>
+
+    <!-- Application Layout -->
+    <div class="app-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a
+            href="assignments.html"
+            class="nav-item active"
+            aria-current="page"
+          >
+            <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
+            <span>Assignments</span>
+          </a>
+
+          <a href="profile.html" class="nav-item">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>Profile</span>
+          </a>
+
+          <a href="help.html" class="nav-item">
+            <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+            <span>Help</span>
+          </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="sidebar-bottom">
+          <a href="index.html" class="nav-item logout-btn">
+            <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="upload-content">
+
+          <!-- Page Heading -->
+          <div class="page-heading">
+            <div>
+              <h1 id="upload-title">Upload Assignment</h1>
+
+              <p>
+                Upload your file to submit your assignment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Upload Card -->
+          <section class="card upload-card">
+            <h2 id="assignment-name">Zoo 1A</h2>
+
+            <p class="upload-description">
+              Select the file you want to submit. Make sure your file follows
+              the required assignment naming and format rules.
+            </p>
+
+            <!-- Upload Form -->
+            <form action="#" method="post" enctype="multipart/form-data">
+              <label for="assignment-file" class="upload-area">
+                <i
+                  class="fa-solid fa-cloud-arrow-up"
+                  aria-hidden="true"
+                ></i>
+
+                <strong>Choose a file to upload</strong>
+
+                <span>
+                  Click here to browse your computer for your assignment file.
+                </span>
+              </label>
+
+              <input
+                type="file"
+                id="assignment-file"
+                name="assignment-file"
+                class="file-input"
+                required
+              />
+
+              <div
+                id="selected-file"
+                class="selected-file"
+                hidden
+              ></div>
+
+              <div class="upload-actions">
+                <a id="cancel-link" href="assignments.html" class="btn btn-outline">
+                  Cancel
+                </a>
+
+                <button type="submit" class="btn btn-primary">
+                  Submit Assignment
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-bar">
+      <p>
+        &copy; 2026 Feedback System &middot; Northcentral Technical College
+      </p>
+    </footer>
+
+    <script>
+      /*
+       * Get the assignment from the URL.
+       *
+       * Example:
+       * upload.html?assignment=zoo1a
+       */
+
+      const params = new URLSearchParams(window.location.search);
+      const assignment = params.get("assignment") || "zoo1a";
+
+      const assignmentNames = {
+        zoo1a: "Zoo 1A",
+        zoo1b: "Zoo 1B",
+        zoo1c: "Zoo 1C",
+        zoo2a: "Zoo 2A"
+      };
+
+      const assignmentName =
+        assignmentNames[assignment] || "Zoo 1A";
+
+      document.getElementById("assignment-name").textContent =
+        assignmentName;
+
+      document.getElementById("upload-title").textContent =
+        "Upload " + assignmentName;
+
+      document.getElementById("back-link").href =
+        "attempts.html?assignment=" + assignment;
+
+      document.getElementById("cancel-link").href =
+        "attempts.html?assignment=" + assignment;
+
+      document.title =
+        "Feedback System - Upload " + assignmentName;
+
+
+      /*
+       * Show the selected filename.
+       */
+
+      const fileInput =
+        document.getElementById("assignment-file");
+
+      const selectedFile =
+        document.getElementById("selected-file");
+
+      fileInput.addEventListener("change", function () {
+        if (fileInput.files.length > 0) {
+          selectedFile.textContent =
+            "Selected file: " + fileInput.files[0].name;
+
+          selectedFile.hidden = false;
+        } else {
+          selectedFile.hidden = true;
+        }
+      });
+    </script>
+  </body>
+</html>
+
